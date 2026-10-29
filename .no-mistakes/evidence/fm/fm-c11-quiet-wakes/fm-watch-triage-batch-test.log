@@ -1,0 +1,4 @@
+1..2
+ok - a status write and its same-batch turn-end queue one signal row; a lone turn-end keeps its row
+ok - a bare turn-end whose crew is not provably working is surfaced (the swallowed-finish fix)
+FM_TEST_COMPLETE

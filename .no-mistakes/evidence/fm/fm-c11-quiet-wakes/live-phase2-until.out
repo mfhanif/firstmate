@@ -1,0 +1,3 @@
+~/.no-mistakes/worktrees/fe56b1c72bdc/01M63FWJ7GGXGS4Q7CVXZM50Y2/bin/backends/herdr.sh: line 3971: printf: write error: Broken pipe
+~/.no-mistakes/worktrees/fe56b1c72bdc/01M63FWJ7GGXGS4Q7CVXZM50Y2/bin/backends/herdr.sh: line 3972: printf: write error: Broken pipe
+stale: fm-lab-quiet-91760-22735:w1:p1 (paused 124s, awaiting external - the declared clearing time has passed, rechecked on a long cadence not a wedge; confirm the wait cleared)
