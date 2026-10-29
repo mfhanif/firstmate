@@ -1,0 +1,36 @@
+## 1. brief, project WITH prefs
+scaffolded: $LAB/data/b-with3/brief.md (ship, mode=local-only; replace {TASK} and {FIRSTMATE_SPEC})
+== Per-project captain preferences for withprefs ($LAB/data/captain-projects/withprefs.md) - apply to every brief, dispatch, review, and merge for this project ==
+# withprefs rules
+- Always squash. Never touch vendor/.
+== End per-project captain preferences for withprefs ==
+rc=0
+## 2. brief, project WITHOUT prefs
+scaffolded: $LAB/data/b-no3/brief.md (ship, mode=local-only; replace {TASK} and {FIRSTMATE_SPEC})
+rc=0
+## 3. review-diff, project WITH prefs
+== Per-project captain preferences for withprefs ($LAB/data/captain-projects/withprefs.md) - apply to every brief, dispatch, review, and merge for this project ==
+# withprefs rules
+- Always squash. Never touch vendor/.
+== End per-project captain preferences for withprefs ==
+diff base: main
+ g.txt | 1 +
+ 1 file changed, 1 insertion(+)
+rc=0
+## 4. review-diff, project WITHOUT prefs
+diff base: main
+ g.txt | 1 +
+ 1 file changed, 1 insertion(+)
+rc=0
+## 5. unreadable prefs (chmod 000): review-diff
+error: $LAB/data/captain-projects/withprefs.md must be a readable regular file
+error: could not read the per-project captain preferences for withprefs
+rc=1
+## 6. unreadable prefs: brief (nothing written?)
+error: $LAB/data/captain-projects/withprefs.md must be a readable regular file
+error: could not read the per-project captain preferences for withprefs
+rc=1
+## 7. symlinked prefs: review-diff
+error: $LAB/data/captain-projects/withprefs.md must be a readable regular file
+error: could not read the per-project captain preferences for withprefs
+rc=1
